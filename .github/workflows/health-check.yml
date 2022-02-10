@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Check all sites
     steps:
+      - uses: szenius/set-timezone@v1.0
+        with:
+          timezoneLinux: "Asia/Shanghai"
       - uses: actions/checkout@v2
       - name: Run Shell Script
         id: shell_script_run
