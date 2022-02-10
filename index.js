@@ -108,26 +108,26 @@ function templatizeString(text, parameters) {
 
 function getStatusText(color) {
   return color == "nodata"
-    ? "No Data Available"
+    ? "没有可用数据"
     : color == "success"
-    ? "Fully Operational"
+    ? "完全正常"
     : color == "failure"
-    ? "Major Outage"
+    ? "严重故障"
     : color == "partial"
-    ? "Partial Outage"
-    : "Unknown";
+    ? "部分故障"
+    : "未知";
 }
 
 function getStatusDescriptiveText(color) {
   return color == "nodata"
-    ? "No Data Available: Health check was not performed."
+    ? "没有可用数据: 健康检查没有运行"
     : color == "success"
-    ? "No downtime recorded today."
+    ? "今天没有发生故障"
     : color == "failure"
-    ? "Major outages recorded today."
+    ? "今天发生过严重故障"
     : color == "partial"
-    ? "Partial outages recorded today."
-    : "Unknown";
+    ? "今天发生过部分故障"
+    : "未知";
 }
 
 function getTooltip(key, date, quartile, color) {
